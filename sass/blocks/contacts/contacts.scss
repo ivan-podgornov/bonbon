@@ -1,0 +1,18 @@
+@import '../../options';
+
+.contacts {
+	padding: 8px 0;
+
+	&__paragraph {
+		color: $c-footer-font;
+		font-family: $f-comfortaa;
+	}
+
+	&__phone-number {
+		display: block;
+		font-size: 24px;
+		font-weight: bold;
+	}
+}
+
+@import 'contacts-desktop';

@@ -1,0 +1,33 @@
+@import '../../options';
+
+.album {
+	height: 261px;
+	position: relative;
+	background-color: $c-light-gray;
+	box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+
+	&__cover {
+		display: block;
+		height: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+		border: none;
+	}
+
+	&__name {
+		width: 100 - 5.06 * 2%; /* 316px */
+		padding: 14px 5.06% 14.8px; /* 316px/16px */
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: $c-light-gray;
+		font-family: $f-comfortaa;
+		line-height: 1.2;
+	}
+
+	&__count-photo {
+		float: right;
+	}
+}

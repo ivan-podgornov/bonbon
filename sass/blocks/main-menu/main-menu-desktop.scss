@@ -1,0 +1,99 @@
+@import '../../options';
+
+.main-menu {
+	@media screen and (min-width: $w-screen) {
+		width: auto;
+		margin: auto;
+		padding: 0;
+		position: static;
+		top: auto;
+		font-size: 0;
+		background-color: transparent;
+		border-radius: 0;
+		box-shadow: none;
+
+		&__item {
+			display: inline-block;
+			font-size: 16px;
+
+			&-submenu {
+				border-bottom: 16px solid $c-page-background;
+
+				&:hover,
+				&:focus {
+					.main-menu__submenu {
+						display: block;
+					}
+				}
+			}
+		}
+
+		&__link {
+			height: auto;
+			padding: 0 16px;
+			color: $c-white;
+			line-height: 50px;
+
+			&:active,
+			&:hover {
+				background-color: #4A433F;
+			}
+		}
+
+		&__icon {
+			padding-left: 16px;
+			position: static;
+
+			&:after {
+				visibility: hidden;
+			}
+		}
+
+		&__submenu {
+			display: none;
+			width: 224px;
+			margin-left: 0;
+			padding: 8px 0;
+			position: absolute;
+			top: 66px;
+			right: 317px;
+			border: 1px solid $c-brown;
+			background-color: $c-white;
+			border-radius: 4px;
+			z-index: 4;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: -14px;
+				right: 8px;
+				border: 7px solid transparent;
+				border-bottom-color: $c-brown;
+			}
+
+			&-link {
+				padding-left: 16px;
+				color: $c-font;
+
+				&:hover {
+					background-color: $c-light-gray;
+				}
+			}
+		}
+	}
+}
+
+.main-menu__submenu-container {
+	@media screen and (min-width: $w-screen) {
+		padding-right: 32px;
+		position: relative;
+
+		&:before {
+			top: 23px;
+			right: 8px;
+			border-width: 5px;
+			border-top-color: $c-white;
+			border-bottom: none !important;
+		}
+	}
+}

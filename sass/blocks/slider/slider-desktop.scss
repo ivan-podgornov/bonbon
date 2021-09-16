@@ -1,0 +1,17 @@
+@import '../../options';
+
+.slider {
+	@media screen and (min-width: $w-screen) {
+		margin-top: 16px;
+	}
+
+	@media screen and (min-width: $w-screen + 80) {
+		&__images {
+			transition: 0.4s margin-left linear;
+		}
+
+		&__arrow {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@import '../options';
+
+.adults-icon:after {
+	content: '';
+	height: 48px;
+	width: 94px;
+	position: absolute;
+	background-image: url("../images/sprite-adult's-menu.png");
+	background-repeat: no-repeat;
+}
+
+.adults-icon_cold-snacks:after { background-position: 0 0; }
+.adults-icon_salads:after { background-position: 0 -48px; }
+.adults-icon_hot-snacks:after { background-position: 0 (-48px * 2); }
+.adults-icon_first-dishes:after { background-position: 0 (-48px * 3); }
+.adults-icon_pork-dishes:after { background-position: 0 (-48px * 4); }
+.adults-icon_chicken-dishes:after { background-position: 0 (-48px * 5); }
+.adults-icon_garnishes:after { background-position: 0 (-48px * 6); }
+.adults-icon_sauces:after { background-position: 0 (-48px * 7); }
+.adults-icon_desserts:after { background-position: 0 (-48px * 8); }
+.adults-icon_fruit-snacks:after { background-position: 0 (-48px * 9); }
+.adults-icon_season-fruit:after { background-position: 0 (-48px * 10); }
+.adults-icon_ice-cream:after { background-position: 0 (-48px * 11); }
+.adults-icon_pizza:after { background-position: 0 (-48px * 12); }
+.adults-icon_pizza-diy:after { background-position: 0 (-48px * 13); }

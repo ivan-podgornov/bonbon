@@ -1,0 +1,45 @@
+@import '../../options';
+
+.price-table {
+	width: 100%;
+	max-width: 780px;
+	margin: 30px auto;
+	border-collapse: collapse;
+
+	&__container {
+		overflow-x: auto;
+	}
+
+	&__caption {
+		margin: 0 auto;
+		max-width: 780px;
+		padding: 14px 0 14.8px;
+		color: $c-dark-red;
+		font-family: $f-comfortaa;
+		font-size: 22px;
+		line-height: 1.2;
+		text-align: left;
+		border-bottom: 1px solid $c-dark-red;
+	}
+
+	&__row:nth-child(odd) {
+			background-color: $c-light-gray;
+	}
+
+	&__cell {
+		padding: 5px 0 5.2px;
+		line-height: 1.2;
+		border: 1px solid #ccc;
+
+		&:first-child {
+			padding-left: 8px;
+		}
+	}
+
+	&__value {
+		text-align: center;
+
+		&:nth-child(2) { width: 108px; }
+		&:last-child { width: 65px; }
+	}
+}

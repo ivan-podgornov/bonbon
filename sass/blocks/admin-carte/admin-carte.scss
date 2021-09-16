@@ -1,0 +1,34 @@
+@import '../../options';
+
+.admin-carte {
+	&__list {
+		position: relative;
+	}
+
+	&__list-item {
+		position: relative;
+		padding-left: 64px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $c-light-gray;
+		}
+	}
+
+	&__remove,
+	&__add {
+		position: absolute;
+	}
+
+	&__remove {
+		margin: auto 0;
+		left: 16px;
+		top: 0;
+		bottom: 0;
+	}
+
+	&__add {
+		left: 16px;
+		top: 8px;
+	}
+}

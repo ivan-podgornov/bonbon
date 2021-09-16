@@ -1,0 +1,10 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^bonbon.loc/
+    RewriteRule (.*) http://bonbon.loc/$1 [R=301,L]
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(php|html|htm|phtml)\ HTTP/
+    RewriteRule ^index\.(php|html|htm|phtml)$ http://bonbon.loc/ [R=301,L]
+
+    RewriteRule ^(adult's-menu|banquet-menu|children's-menu|coffee-card|animations|gallery|price-list)$ $1.php [L]
+    RewriteRule ^albums/([a-zA-Z0-9АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЬЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщыьъэюя+-]+)$ albums/show_album.php?album=$1 [L]

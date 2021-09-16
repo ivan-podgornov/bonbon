@@ -1,0 +1,44 @@
+@import '../../options';
+
+.navigation {
+	float: right;
+	height: 12px;
+	width: 19px;
+	margin-top: 17px;
+	position: relative;
+	left: -4px;
+	border-top: 2px solid $c-gray;
+	border-bottom: 2px solid $c-gray;
+
+	&:before {
+		content: '';
+		height: 2px;
+		width: 19px;
+		position: absolute;
+		top: 5px;
+		left: 4px;
+		background-color: $c-gray;
+		transition: 0.4s left ease-out;
+	}
+
+	.main-menu {
+		visibility: hidden;
+		position: fixed;
+		left: 200%;
+	}
+
+	&_active {
+		left: 0;
+		outline: none;
+
+		&:before { left: -4px; }
+		.main-menu {
+			visibility: visible;
+			position: absolute;
+			right: -16px;
+			left: auto;
+		}
+	}
+}
+
+@import 'navigation-desktop';

@@ -1,0 +1,33 @@
+@import '../../options';
+
+.navigation {
+	@media screen and (min-width: $w-screen) {
+		/* reset mobile properties */
+		height: auto;
+		width: auto;
+		margin: auto;
+		left: auto;
+		border-top: none;
+		border-bottom: none;
+
+		&:before { display: none; }
+
+		&:hover,
+		&:focus {
+			left: auto;
+
+			.main-menu {
+				visibility: visible;
+				position: static;
+				right: auto;
+				left: auto;
+			}
+		}
+
+		.main-menu {
+			visibility: visible;
+			position: static;
+			left: auto;
+		}
+	}
+}

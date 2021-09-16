@@ -1,0 +1,69 @@
+@import '../../options';
+
+.photo-slider {
+	@media screen and (min-width: $w-screen) {
+		height: 100%;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		cursor: pointer;
+
+		&__photo {
+			display: inline;
+
+			&-container {
+				display: inline-block;
+				height: auto;
+				min-width: $w-tablet;
+				text-align: center;
+				background-color: #1E1E1E;
+				cursor: auto;
+
+				&:hover {
+					.photo-slider__arrow { visibility: visible; }
+				}
+			}
+		}
+
+		&__info {
+			position: static;
+			background-color: transparent;
+		}
+
+		&__arrow {
+			visibility: hidden;
+			height: 100%;
+			height: calc(100% - 48px);
+			width: 50%;
+			top: 0;
+			background-color: transparent !important;
+
+			&_left {
+				left: 0;
+
+				&:after {
+					left: 3.67 * 2%;
+					right: auto;
+					background-position: 0 0 !important;
+				}
+
+				&:hover:after { background-position: -18px 0 !important; }
+			}
+
+			&_right {
+				right: 0;
+
+				&:after {
+					right: 3.67 * 2%;
+					left: auto;
+					background-position: 0 -30px !important;
+				}
+
+				&:hover:after { background-position: -18px -30px !important; }
+			}
+		}
+
+		&__close, &__remove {
+			background-color: transparent;
+		}
+	}
+}

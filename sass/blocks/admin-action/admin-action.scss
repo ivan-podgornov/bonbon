@@ -1,0 +1,30 @@
+@import '../../options';
+
+.admin-action {
+	&_add,
+	&_remove {
+		display: inline-block;
+		height: 32px;
+		width: 32px;
+		font-family: $f-comfortaa;
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 3px;
+		cursor: pointer;
+		border: 1px solid transparent;
+	}
+
+	&_remove {
+		color: $c-dark-red;
+		background-color: $c-light-red;
+		border-color: $c-dark-red;
+	}
+
+	&_add {
+		color: $c-green;
+		background-color: $c-light-green;
+		border-color: $c-green;
+	}
+}
