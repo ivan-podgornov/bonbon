@@ -1,2 +1,4 @@
 # Ignore webstorm/phpstorm folder
 /.idea
+
+/node_modules/
