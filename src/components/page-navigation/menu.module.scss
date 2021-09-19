@@ -1,0 +1,162 @@
+@import '../../assets/options.scss';
+
+.menu {
+  width: 314px;
+  margin: 0;
+  padding: 8px 0;
+  position: absolute;
+  top: 31px;
+  list-style-type: none;
+  background-color: $c-white;
+  border-radius: 3px;
+  box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 4;
+
+  @media screen and (min-width: $w-screen) {
+    width: auto;
+    margin: auto;
+    padding: 0;
+    position: static;
+    top: auto;
+    font-size: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.item {
+  @media screen and (min-width: $w-screen) {
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+.link {
+  display: block;
+  height: 48px;
+  padding: 0 16px;
+  color: $c-font;
+  line-height: 48px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s background-color ease-out;
+
+  &:active,
+  &:hover {
+    background-color: $c-light-gray;
+  }
+
+  @media screen and (min-width: $w-screen) {
+    height: auto;
+    padding: 0 16px;
+    color: $c-white;
+    line-height: 50px;
+
+    &:active,
+    &:hover {
+      background-color: #4A433F;
+    }
+  }
+}
+
+.icon {
+  padding-left: 50px;
+  position: relative;
+
+  &:after {
+    margin: auto;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: $w-screen) {
+    padding-left: 16px;
+    position: static;
+
+    &:after {
+      visibility: hidden;
+    }
+  }
+}
+
+.submenu {
+  margin-left: -40px;
+  list-style-type: none;
+
+  @media screen and (min-width: $w-screen) {
+    display: none;
+    width: 224px;
+    margin-left: 0;
+    padding: 8px 0;
+    position: absolute;
+    top: 66px;
+    right: 317px;
+    border: 1px solid $c-brown;
+    background-color: $c-white;
+    border-radius: 4px;
+    z-index: 4;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -14px;
+      right: 8px;
+      border: 7px solid transparent;
+      border-bottom-color: $c-brown;
+    }
+  }
+}
+
+.submenuLink {
+  padding-left: 66px;
+
+  @media screen and (min-width: $w-screen) {
+    padding-left: 16px;
+    color: $c-font;
+
+    &:hover {
+      background-color: $c-light-gray;
+    }
+  }
+}
+
+.submenuContainer {
+  &:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: 7px solid transparent;
+    border-top-color: #777;
+  }
+
+  &_active:before {
+    top: 15px;
+    border: 7px solid transparent;
+    border-bottom-color: #777;
+  }
+
+  @media screen and (min-width: $w-screen) {
+    padding-right: 32px;
+    position: relative;
+
+    &:before {
+      top: 23px;
+      right: 8px;
+      border-width: 5px;
+      border-top-color: $c-white;
+      border-bottom: none !important;
+    }
+  }
+}
+
+.submenuContainer + .submenu { display: none; }
+.submenuContainer_active + .submenu { display: block; }
+.submenuContainer:focus + .submenu {
+  @media screen and (min-width: $w-screen) {
+    display: block;
+  }
+}

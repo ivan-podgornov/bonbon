@@ -1,7 +1,8 @@
 import type { FC } from 'react';
+import LayoutDefault from '../layouts/default';
 
 const PageIndex: FC = () => (
-  <h1>Bonbon</h1>
+  <LayoutDefault />
 );
 
 export default PageIndex;

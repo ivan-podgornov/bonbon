@@ -1,0 +1,13 @@
+@import './options.scss';
+@import 'normalize.css';
+
+body {
+  min-width: 320px;
+  position: relative;
+  color: $c-font;
+  font-family: $f-comfortaa;
+  font-size: 16px;
+  background-color: $c-page-background;
+}
+
+@import './sprites/sprite-icon.scss';
