@@ -1,8 +1,0 @@
-@import '../../options';
-
-.admin-price-category {
-	&_removable {
-		cursor: pointer;
-		&:hover { background-color: $c-light-red; }
-	}
-}
