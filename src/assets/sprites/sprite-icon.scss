@@ -1,0 +1,14 @@
+.icon:after {
+  content: '';
+  height: 20px;
+  width: 18px;
+  position: absolute;
+  background-image: url('/images/sprite-icons.png');
+  background-repeat: no-repeat;
+}
+
+.icon_home:after { background-position: 0 0; }
+.icon_menu:after { background-position: 0 -20px; }
+.icon_animations:after { background-position: 0 -40px; }
+.icon_photos:after { background-position: 0 -60px; }
+.icon_price-list:after { background-position: 0 -80px; }

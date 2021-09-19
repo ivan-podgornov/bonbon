@@ -1,0 +1,23 @@
+@import '../../assets/options.scss';
+
+.header {
+  padding-top: 50px;
+
+  @media screen and (min-width: $w-screen) {
+    padding-top: 0;
+  }
+}
+
+.topbar {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $c-topbar-background;
+  z-index: 128;
+
+  @media screen and (min-width: $w-screen) {
+    position: static;
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../assets/options.scss';
+
+.logo {
+  float: left;
+  margin: 0;
+  color: $c-logo-font;
+  font-family: 'Sevillana', 'Comic Sans MS', serif;
+  font-size: 36px;
+  line-height: 50px;
+
+  @media screen and (min-width: $w-screen) {
+    margin-left: 16px;
+  }
+}
+
+.link,
+.link:visited {
+  color: $c-logo-font;
+  text-decoration: none;
+}
