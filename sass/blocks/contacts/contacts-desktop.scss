@@ -1,9 +1,0 @@
-@import '../../options';
-
-.contacts {
-	@media screen and (min-width: $w-screen) {
-		&__heading { font-size: 72px; }
-		&__phone-number { font-size: 36px; }
-		&__paragraph { font-size: 24px; }
-	}
-}
