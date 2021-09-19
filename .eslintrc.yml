@@ -1,0 +1,37 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - plugin:react/recommended
+  - airbnb
+  - airbnb/hooks
+  - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+globals:
+  JSX: true
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 2021
+  project: './tsconfig.json'
+  sourceType: module
+plugins:
+  - '@typescript-eslint'
+  - import
+  - react
+settings:
+  import/resolver:
+    typescript: {}
+rules: {
+  import/extensions: ['error', 'ignorePackages', {
+    ts: 'never',
+    tsx: 'never'
+  }],
+  import/prefer-default-export: 'off',
+  react/destructuring-assignment: ['error', 'never'],
+  react/react-in-jsx-scope: 'off',
+  react/jsx-filename-extension: ['error', {
+    extensions: ['.tsx']
+  }]
+}
