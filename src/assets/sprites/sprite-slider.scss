@@ -1,0 +1,18 @@
+@import '../options';
+
+.slider-icon:after {
+  content: '';
+  height: 30px;
+  width: 18px;
+  position: absolute;
+  background-image: url('/images/sprite-slider.png');
+  background-repeat: no-repeat;
+}
+
+.slider-icon_arrow-left:after { background-position: -18px 0; }
+.slider-icon_arrow-right:after { background-position: -18px -30px; }
+.slider-icon_close:after {
+  height: 16px;
+  width: 16px;
+  background-position: -18px -60px;
+}

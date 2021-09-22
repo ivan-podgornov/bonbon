@@ -1,0 +1,116 @@
+@import '../../assets/options.scss';
+
+.slider {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  user-select: none;
+
+  &:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* TODO: возможно noise следует перенести в этот компонент */
+    background: url('/images/noise.png') repeat;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: $w-screen) {
+    margin-top: 16px;
+  }
+}
+
+.imagesContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.images {
+  width: 300%;
+  margin: 0 0 0 -100%;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+
+  @media screen and (min-width: $w-screen + 80) {
+    transition: 0.4s margin-left linear;
+  }
+}
+
+.item {
+  display: inline-block;
+  width: 33.3333%;
+}
+
+.image {
+  width: 100%;
+}
+
+.rounds {
+  width: 46px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  bottom: 21px;
+  right: 0;
+  left: 0;
+  font-size: 0;
+  list-style-type: none;
+  z-index: 2;
+}
+
+.round {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  border: 1px solid $c-light-gray;
+  border-radius: 50%;
+
+  &:last-child { margin-right: 0; }
+  &_active { background-color: $c-light-gray; }
+}
+
+.arrow {
+  display: none;
+  height: 46px;
+  width: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: 1px solid $c-brown;
+  background-color: $c-light-gray;
+  transition: 0.4s background-color ease-out;
+  cursor: pointer;
+  z-index: 4;
+
+  &:hover { background-color: $c-brown; }
+  &:after {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+  }
+
+  &_left {
+    left: -29px;
+    &:after { left: 17px; }
+  }
+
+  &_right {
+    right: -29px;
+    &:after { right: 17px; }
+  }
+
+  @media screen and (min-width: $w-screen + 80) {
+    display: block;
+  }
+}
