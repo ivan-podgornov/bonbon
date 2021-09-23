@@ -1,0 +1,47 @@
+@import '../../assets/options.scss';
+
+.features {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+  text-align: center;
+
+  @media screen and (min-width: $w-tablet) { text-align: left; }
+  @media screen and (min-width: $w-screen) { margin: 0 auto 8px; }
+}
+
+.feature {
+  margin: 0 0 16px;
+  font-size: 16px;
+  text-align: left;
+
+  @media screen and (min-width: $w-mobile-m) and (max-width: $w-tablet - 1) {
+    display: inline-block;
+    vertical-align: top;
+    width: 48.94%; /* 425px/208px */
+
+    &:nth-child(even) { margin-left: 1.88%; /* 425px/8px */ }
+  }
+
+  @media screen and (min-width: $w-tablet) {
+    display: inline-block;
+    vertical-align: top;
+    width: 32.34%; /* 980px/316px */
+    margin-left: 1.49%; /* 980px/16px */;
+
+    &:nth-child(3n + 1) { margin-left: 0; }
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.name {
+  padding: 13px 8px 15.8px;
+  font-family: $f-comfortaa;
+  font-size: 16px;
+  line-height: 1.2; /* 19.2px */
+  text-align: center;
+}
